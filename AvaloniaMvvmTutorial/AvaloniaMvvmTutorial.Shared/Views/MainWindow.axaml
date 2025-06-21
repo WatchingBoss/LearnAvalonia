@@ -1,0 +1,20 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaMvvmTutorial.Shared.ViewModels"
+        xmlns:views="using:AvaloniaMvvmTutorial.Shared.Views"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaMvvmTutorial.Shared.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Avalonia MVVM Tutorial"
+        x:DataType="vm:MainWindowViewModel">
+
+    <!-- The ViewLocator will resolve MainWindowViewModel to MainView -->
+    <!-- So if DataContext is MainWindowViewModel, this ContentControl will display MainView -->
+    <ContentControl Content="{Binding}"/>
+
+    <!-- Alternative: Directly include MainView if ViewLocator is not used for the main content -->
+    <!-- <views:MainView /> -->
+
+</Window>
